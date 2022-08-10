@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sta210-s22.github.io/website/ae/ae-0-movies.html</loc>
-    <lastmod>2022-08-10T15:12:45.893Z</lastmod>
+    <lastmod>2022-08-10T16:46:36.072Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/ae/ae-1-dcbikeshare.html</loc>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/computing-access.html</loc>
-    <lastmod>2022-08-10T15:12:53.640Z</lastmod>
+    <lastmod>2022-08-10T16:50:06.235Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/computing-pipelines.html</loc>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/computing-troubleshooting.html</loc>
-    <lastmod>2022-08-10T15:12:54.617Z</lastmod>
+    <lastmod>2022-08-10T16:47:59.569Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/course-faq.html</loc>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/course-overview.html</loc>
-    <lastmod>2022-08-10T15:12:55.806Z</lastmod>
+    <lastmod>2022-08-10T16:50:52.848Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/course-support.html</loc>
@@ -162,7 +162,7 @@
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/project-description.html</loc>
-    <lastmod>2022-08-10T15:13:09.073Z</lastmod>
+    <lastmod>2022-08-10T16:46:14.450Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/project-tips-resources.html</loc>
@@ -190,7 +190,7 @@
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/weeks/week-1.html</loc>
-    <lastmod>2022-08-10T15:13:12.208Z</lastmod>
+    <lastmod>2022-08-10T16:46:24.581Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/weeks/week-10.html</loc>
@@ -247,5 +247,9 @@
   <url>
     <loc>https://sta210-s22.github.io/website/weeks/week-9.html</loc>
     <lastmod>2022-08-10T15:13:17.514Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/article-overview.html</loc>
+    <lastmod>2022-08-10T16:51:46.216Z</lastmod>
   </url>
 </urlset>
