@@ -22,4 +22,11 @@ Como regra geral, SEM é indicado quando mais de uma equação de regressão é 
 
 ![Problemas estatísticos que necessitam de abordagem SEM.](images/SEM_examplo1.png){#sem1 .Figuras fig-alt="Problemas estatísticos que necessitam de abordagem SEM." width="700"}
 
+A parte esquerda da Figura 1 mostra uma situação em que dois resultados, denotados por $Y1$ e $Y2$, estão mutuamente relacionados (um loop de feedback) e influenciados por dois preditores, denotados por $X1$ e $X2$. Por exemplo, os resultados podem ser demanda e oferta de um determinado serviço de saúde ou percepção de risco e incidência de um determinado problema de saúde. 
+
+Os termos de **erro** das variáveis preditoras, denotados $e1$ e $e2$, podem ser correlacionados ($r$) se uma variável importante que influencia ambos os preditores for omitida, ou seja, no caso de viés nas medidas de exposição. Os termos $d1$ e $d2$ indicam distúrbios dos dois resultados. 
+
+A parte direita da Figura 1 ilustra uma combinação de fatores comuns e modelo de regressão. Neste caso, interessa testar se o resultado $Y$ é determinado não apenas por influências diretas das variáveis preditoras, denotadas por $X1$, $X2$, $X3$ e $X4$, mas também por seu determinante latente indicado pelo coeficiente de regressão $b$.
+
+O SEM recebeu muitas críticas, a maioria das quais preocupada com a vulnerabilidade de modelos complexos baseados em muitas suposições, bem como com o uso e interpretação acríticos do SEM. Essas são preocupações bem colocadas, mas não são intrínsecas ao SEM; mesmo técnicas bem conhecidas e amplamente aplicadas, como a regressão, compartilham as mesmas preocupações. Fenômenos complexos requerem modelos complexos cujos aspectos inferenciais são mais propensos a erros à medida que o número de parâmetros aumenta. SEM é muitas vezes a única estrutura estatística pela qual muitas dessas questões podem ser abordadas testando e comparando os modelos obtidos.
 

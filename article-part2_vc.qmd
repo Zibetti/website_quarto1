@@ -1,0 +1,6 @@
+---
+title: "Manipulando variáveis categóricas no SEM"
+editor: visual
+---
+
+Críticas específicas quanto ao tratamento de variáveis ​​categóricas e ordinais em SEM tem sido um forte impedimento para seu uso mais amplo. O tratamento ingênuo de variáveis ​​binárias e categóricas ordenadas como se fossem normalmente distribuídas em algumas aplicações SEM foi em parte devido à falta de alternativas viáveis ​​em seus primeiros dias. O uso inadequado de coeficientes de regressão padronizados como medidas de efeito em algumas aplicações SEM também foi criticado [ 10]. Mesmo quando as propriedades distributivas das variáveis ​​categóricas foram levadas em consideração, a interpretação das estimativas dos parâmetros SEM em termos de medidas de impacto, como risco atribuível, não foi aplicada. Erros padrão e limites de confiança – raramente usados ​​em SEM – geralmente subestimam as incertezas do modelo estrutural, como a seleção de variáveis ​​relevantes e a especificação correta de suas influências.
