@@ -1,1 +1,1 @@
-Sitemap: https://sta210-s22.github.io/website/sitemap.xml
+Sitemap: https://zibetti.github.io/website_quarto1/_site/sitemap.xml
