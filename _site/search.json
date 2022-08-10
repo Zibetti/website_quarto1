@@ -291,7 +291,7 @@
     "href": "ae/ae-12-exam-3-review.html#exercise-11",
     "title": "AE 12: Exam 3 Review",
     "section": "Exercise 11",
-    "text": "Exercise 11\nConditions for multinomial logistic (and logistic models as well):\n\nIndependence:\nRandomness:\nLinearity:\n\n\nemplogitplot1(lb ~ force, data = claws, ngroups = 10)\n\nemplogitplot1(lb ~ height, data = claws, ngroups = 10)\n\n\n\n\n\n\n\n\n\n\n\n\n# add code here for other species here\n\n\n\n\n\n# add code here for other species here"
+    "text": "Exercise 11\nConditions for multinomial logistic (and logistic models as well):\n\nIndependence:\nRandomness:\nLinearity:\n\n\nemplogitplot1(lb ~ force, data = claws, ngroups = 10)\nemplogitplot1(lb ~ height, data = claws, ngroups = 10)\n\n\n\n\n\n\n\n\n\n\n\n\n# add code here for other species here\n\n\n\n\n\n# add code here for other species here"
   },
   {
     "objectID": "ae/ae-12-exam-3-review.html#checking-for-multicollinearity-in-logistic-and-multinomial-logistic",
