@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STA 210 - Spring 2022 - Manipulando variáveis categóricas no SEM</title>
+<title>Projeto Saúde da Mulher - Manipulando variáveis categóricas no SEM</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +24,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./article-part2_mt.html" rel="next">
+<link href="./article-overview.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -56,10 +58,10 @@ ul.task-list{list-style: none;}
 }</script>
 
 
-<meta name="twitter:title" content="STA 210 - Spring 2022 - Manipulando variáveis categóricas no SEM">
-<meta name="twitter:description" content="Críticas específicas quanto ao tratamento de variáveis ​​categóricas e ordinais em SEM tem sido um forte impedimento para seu uso mais amplo.">
-<meta name="twitter:image" content="https://sta210-s22.github.io/website/images/twitter-card.png">
-<meta name="twitter:creator" content="@minebocek">
+<meta name="twitter:title" content="Projeto Saúde da Mulher - Manipulando variáveis categóricas no SEM">
+<meta name="twitter:description" content="Críticas específicas quanto ao tratamento de variáveis categóricas e ordinais no SEM tem sido um forte impedimento para seu uso mais amplo.">
+<meta name="twitter:image" content="https://zibetti.github.io/website_quarto1/_site/images/twitter-card.png">
+<meta name="twitter:creator" content="@">
 <meta name="twitter:image-height" content="418">
 <meta name="twitter:image-width" content="800">
 <meta name="twitter:card" content="summary_large_image">
@@ -102,30 +104,30 @@ ul.task-list{list-style: none;}
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Course</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Course</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./article-overview.html" class="sidebar-item-text sidebar-link">Overview</a>
+  <a href="./article-overview.html" class="sidebar-item-text sidebar-link">Intro ao SEM</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">Syllabus</a>
+  <a href="./article-part2_vc.html" class="sidebar-item-text sidebar-link active">Manipulando var. categóricas</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">Support</a>
+  <a href="./article-part2_mt.html" class="sidebar-item-text sidebar-link">Métodos</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-team.html" class="sidebar-item-text sidebar-link">Teaching team</a>
+  <a href="./article-part2_ex.html" class="sidebar-item-text sidebar-link">Exemplos</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,7 +333,18 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>Críticas específicas quanto ao tratamento de variáveis ​​categóricas e ordinais em SEM tem sido um forte impedimento para seu uso mais amplo. O tratamento ingênuo de variáveis ​​binárias e categóricas ordenadas como se fossem normalmente distribuídas em algumas aplicações SEM foi em parte devido à falta de alternativas viáveis ​​em seus primeiros dias. O uso inadequado de coeficientes de regressão padronizados como medidas de efeito em algumas aplicações SEM também foi criticado [ 10]. Mesmo quando as propriedades distributivas das variáveis ​​categóricas foram levadas em consideração, a interpretação das estimativas dos parâmetros SEM em termos de medidas de impacto, como risco atribuível, não foi aplicada. Erros padrão e limites de confiança – raramente usados ​​em SEM – geralmente subestimam as incertezas do modelo estrutural, como a seleção de variáveis ​​relevantes e a especificação correta de suas influências.</p>
+<p>Críticas específicas quanto ao tratamento de variáveis categóricas e ordinais no SEM tem sido um forte impedimento para seu uso mais amplo. O tratamento ingênuo de variáveis binárias e categóricas ordinais como se fossem normalmente distribuídas em algumas aplicações SEM foi em parte devido à falta de alternativas viáveis em seus primeiros dias. O uso inadequado de coeficientes de regressão padronizados como medidas de efeito em algumas aplicações SEM também foi criticado. Mesmo quando as propriedades distributivas das variáveis categóricas foram levadas em consideração, a interpretação das estimativas dos parâmetros SEM em termos de medidas de impacto, como risco atribuível, não foi aplicada. Erros padrão e limites de confiança – raramente usados em SEM – geralmente subestimam as incertezas do modelo estrutural, como a seleção de variáveis relevantes e a especificação correta de suas influências.</p>
+<p>Uma revisão recente do tratamento de variáveis categóricas e outras variáveis não normais em SEM listou quatro estratégias principais:</p>
+<ol type="a">
+<li><p>estimadores de distribuição assintótica livre (ADF) ajustando para não normalidade levando em consideração curtose na distribuição multivariada conjunta;</p></li>
+<li><p>o uso de estimativa robusta de máxima verossimilhança ou técnicas de reamostragem, como <em>jacknife</em> ou <em>bootstrap</em>, para obter os erros padrão dos parâmetros SEM, pois estes são mais afetados pelo desvio da normalidade multivariada</p></li>
+<li><p>calcular correlações polisseriais, tetracóricas ou policóricas para pares de variáveis com distribuição conjunta não normal assumindo que estes têm uma escala contínua subjacente (latente) cuja distribuição conjunta da amostra grande é normal bivariada, então usando essas correlações como entrada para SEM e;</p></li>
+<li><p>estimar as <em>scores</em> do modelo probit ou logit para variáveis categóricas observadas como o primeiro nível, e então proceder com SEM com base nesses <em>scores</em> como o segundo nível. A estimativa ADF geralmente requer grandes amostras para manter o erro tipo II em um nível razoável e variáveis extremamente não normais, como a binária, pode ser difícil de lidar com precisão suficiente.</p></li>
+</ol>
+<p>As duas últimas estratégias dependem criticamente de quão bem o modelo de primeiro nível se ajusta aos dados.</p>
+<p>Uma revisão de modelos estatísticos para dados categóricos revela a falta de um método capaz de lidar com mais de uma equação de regressão. Embora modelos log-lineares para tabelas de contingência possam analisar resultados categóricos relacionados e sua relação com variáveis independentes, interações possivelmente complexas entre as variáveis no modelo não indicam a direção das influências como nos modelos de regressão. Isso sublinha a necessidade de uma estrutura SEM para análise de dados categóricos para lidar com técnicas de redução de dimensionalidade e regressão dentro do mesmo modelo (a parte direita da Figura 1).</p>
+<p>Dois grandes desenvolvimentos recentes no tratamento de dados categóricos incluem a extensão do SEM de Muthen para a abordagem de *modelagem de variável latente** e uma extensão de modelos lineares generalizados para variáveis latentes e mistas sob a estrutura GLLAMM (<em>Generalized Linear Latent And Mixed Models</em>). Apesar de terem origens estatísticas diferentes, tanto o software Mplus de Muthén e GLLAMM são capazes de modelar uma mistura de variáveis de escala contínua, ordinal e nominal, múltiplos grupos (incluindo clusters) e dados hierárquicos (multinível), efeitos aleatórios, dados perdidos, variáveis latentes (incluindo classes latentes e modelos de crescimento latente) e modelos de sobrevivência em tempo discreto.</p>
+<p>Ambos os desenvolvimentos são baseados na visão de modelos lineares generalizados como uma estrutura unificadora para variáveis contínuas e categóricas, onde as últimas são primeiramente transformadas em funções lineares contínuas e posteriormente modeladas por SEM. Este artigo segue a mesma linha, mas propõe uma transformação diferente para variáveis categóricas, até então não utilizadas em SEM. São apresentados um exemplo de dados simulados e reais com uma variável de confusão latente.</p>
 
 
 
@@ -536,11 +549,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./article-overview.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Intro ao SEM</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./article-part2_mt.html" class="pagination-link">
+        <span class="nav-page-text">Métodos</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2022, Mine Çetinkaya-Rundel</div>   
-    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="nav-footer-left">© Copyright 2022, André Wüst Zibetti</div>   
+    <div class="nav-footer-right">This page is built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
 
