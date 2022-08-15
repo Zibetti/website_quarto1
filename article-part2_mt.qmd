@@ -1,3 +1,135 @@
 ---
 title: "Métodos"
+editor_options: 
+  chunk_output_type: console
 ---
+
+<!-- https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-6-13 -->
+
+## Geração e transformação de dados
+
+Esta proposta ilustra a aplicação do SEM para variáveis categóricas binárias usando a transformação de *Yule* para aproximar a matriz dos coeficientes de correlação de *Pearson* a partir da razão de chances (*odds ratio* **OR**) por uma fórmula bem conhecida $(OR-1)/(OR+1)$. 
+
+O primeiro exemplo é baseado em processos de geração de dados conhecido para evitar incerteza sobre o verdadeiro modelo, praticamente inevitável para dados empíricos. Um conjunto de dados com **5000** observações foi gerado para permitir a aproximação da normalidade. Primeiramente, três variáveis aleatórias contínuas, denominadas $x_1$ a $x_3$, foram criadas a partir de uma distribuição uniforme. As variáveis não foram correlacionadas na população. Suas versões binárias, denominadas $BIN_1$ a $BIN_3$, foram obtidos codificando os valores acima da média como 1 *versus* 0, caso contrário. Duas variáveis dependentes contínuas foram criadas pelas seguintes equações:
+
+$$m = 1.5 x_1 + 2 x_2 + e_1$$
+
+$$y = 0.5 x_2 - 2.5 x_3 + 1.3 m + e_2$$
+
+```{r}
+x1 = runif(5000)
+x2 = runif(5000)
+x3 = runif(5000)
+bin1 = ifelse(x1 > 0.5,1,0)
+bin2 = ifelse(x2 > 0.5,1,0)
+bin3 = ifelse(x3 > 0.5,1,0)
+m    = 1.5*x1 + 2*x2 + rnorm(5000)
+y    = 0.5*x1 - 2.5*x2 + 1.3*m + rnorm(5000)
+```
+
+```{r}
+library(ggplot2)
+ggplot(data = as.data.frame(x1), aes(x=x1))+geom_histogram()
+ggplot(data = as.data.frame(bin1), aes(x=bin1))+geom_bar()
+```
+
+
+
+com $e_1$ e $e_2$ sendo erros aleatórios normalmente distribuídos $N(0,1)$, gerados a partir de diferentes sementes (*seeds*). 
+
+As versões binárias das variáveis dependentes, denominadas $MBIN$ e $YBIN$, foram criados aplicando a regra de classificação de regressão logística, ou seja, pontuação 1 se $exp(m)/(1 + exp (m))$ e $exp(y)/(1 + exp(y))$ excederem 0.5 *versus* 0 caso contrário.
+
+```{r}
+plot(m,exp(m)/(1 + exp (m)))
+abline(h=0.5, col = "red")
+
+plot(y,exp(y)/(1 + exp (y)))
+abline(h=0.5, col="red")
+```
+
+
+```{r}
+mbin = ifelse(exp(m)/(1 + exp (m)) > 0.5, 1,0)
+ybin = ifelse(exp(y)/(1 + exp(y)) > 0.5, 1,0)
+```
+
+```{r}
+plot(m,mbin)
+plot(y,ybin)
+```
+
+
+As razões de chances (OR) observadas entre as variáveis de interesse nos conjuntos de dados gerados são relatadas na tabela 1. As relações estruturais entre as variáveis no segundo conjunto de dados estão representadas na Figura 2.
+
+```{r}
+library(epitools)
+RRtable = table(bin1,ybin)
+riskratio.wald(RRtable)
+oddsratio.wald(RRtable)
+
+# valor aproximado de coeficiente de correlação - aproximação
+cor(bin1,ybin) 
+# coeficinente de Phi - variáveis binárias
+sqrt(chisq.test(table(bin1,ybin), correct=FALSE)$statistic/length(bin1))
+
+library(psych)
+tetrachoric(RRtable)
+Yule(RRtable)
+YuleCor(RRtable)
+YuleBonett(RRtable)
+
+# Logistic regression
+m1 = glm(bin1 ~ ybin, family = binomial)
+m1_ = glm(ybin ~ bin1, family = binomial)
+require(MASS)
+exp(confint(m1))
+confint.default(m1)
+
+# https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-6-13/tables/1
+# ** Back-transformed from Q to OR by (1+Q)/(1-Q) - onde Correlation (Q) estimate
+library(epiDisplay)
+logistic.display(m1)
+
+library(sjPlot)
+library(sjmisc)
+library(sjlabelled)
+tab_model(m1)
+```
+
+![Modelo simulado.](images/SEM_exemplo2.png){#sem1 .Figuras fig-alt="Modelo simulado." width="300"}
+
+```{r}
+data_art1 = data.frame(bin1,bin2,bin3,mbin,ybin)
+
+library(lavaan)
+library(lavaanPlot)
+
+
+# Model specification
+model1 = '
+        # Structural model
+        mbin ~ b1*bin1 + b2*bin2 + b3*bin3
+        ybin ~ a1*bin1 + a2*bin2 + a3*bin3
+        ybin ~ a4*mbin
+'
+
+# Model estimation
+model1.fit = sem(model1,
+                 data = data_art1,
+                 estimator = "ML",
+                 meanstructure = FALSE)
+summary(model1.fit,
+        rsquare = TRUE,
+        standardized = TRUE,
+        fit.measures = TRUE)
+
+# Visualize the path model
+library(semPlot)
+semPaths(model1.fit,
+         rotation = 3,
+         layout = "tree2",
+         what = "std",
+         posCol = "black")
+
+```
+

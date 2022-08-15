@@ -2,3 +2,4 @@
 title: "Métodos"
 ---
 
+<!-- https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-6-13 -->
